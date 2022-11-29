@@ -2,8 +2,14 @@
 #include <string.h>
 #include <stdlib.h>
 
-void str_compare(char* s, int n) {
-	
+void indexout(char* s) {
+	int idx = 0;
+
+	while(*s != ' ') {
+		s++;
+		idx++;
+	}
+	return idx;	
 }
 
 int main(void) {
@@ -16,8 +22,8 @@ int main(void) {
 	printf("Input str2: ");
 	gets(str2);
 
-	idx1 = strlen(str1);
-	idx2 = strlen(str2);
+	idx1 = indexout(str1);
+	idx2 = indexout(str2);
 
 	
 
